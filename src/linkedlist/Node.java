@@ -31,4 +31,16 @@ public class Node<T> {
         return tail;
     }
 
+    /**
+     * Add a node to the front of the list
+     * This is a none destructive approach
+     * meaning that the original list will be
+     * unaffected
+     * @param data A data value to be stored in the head node
+     * @return A new linked list with a new head
+     */
+    public Node<T> addFront(T data) {
+        return new Node<T>(data, this);
+    }
+
 }

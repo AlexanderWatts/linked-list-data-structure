@@ -5,11 +5,13 @@ public class Main {
     public static void main(String[] args) {
 
         //Linked list data structure
-        Node<Integer> linkedlist = new Node<>(12, new Node<>(13, null));
+        Node<Integer> linkedList = new Node<>(12, new Node<>(13, null));
 
-        //Tests
-        System.out.println(linkedlist.getData());
-        System.out.println(linkedlist.getTail().getData());
+        Node<Integer> newNode = linkedList.addFront(11);
+
+        System.out.println(newNode.getTail().getTail().getData());
+
+
 
     }
 

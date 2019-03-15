@@ -17,4 +17,18 @@ public class Node<T> {
         this.tail = tail;
     }
 
+    /**
+     * @return data The data stored in the node
+     */
+    public T getData() {
+        return data;
+    }
+
+    /**
+     * @return tail A nodes tail
+     */
+    public Node<T> getTail() {
+        return tail;
+    }
+
 }

@@ -40,7 +40,38 @@ public class Node<T> {
      * @return A new linked list with a new head
      */
     public Node<T> addFront(T data) {
-        return new Node<T>(data, this);
+        return new Node<>(data, this);
     }
+
+    /**
+     * Print all the data in the linked list
+     */
+    public void printAll() {
+
+        //Store our current linked list
+        Node<T> current = this;
+
+        //Check if the tail is equal to null
+        //then stop the loop as we know we
+        //are at the end of the linked list
+        while(current.getTail() != null) {
+
+            System.out.println(current.getData());
+
+            //If the current nodes tail is null
+            //then print the nodes data
+            if(current.getTail().getTail() == null) {
+                System.out.println(current.getTail().getData());
+            }
+
+            //Set our current node to the next
+            //nodes tail so it becomes the
+            //linked list
+            current = current.getTail();
+
+        }
+
+    }
+
 
 }

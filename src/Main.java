@@ -1,7 +1,12 @@
+import linkedlist.Node;
+
 public class Main {
 
     public static void main(String[] args) {
-        //write code here
+
+        //Linked list data structure
+        Node<Integer> linkedlist = new Node<>(12, null);
+
     }
 
 }

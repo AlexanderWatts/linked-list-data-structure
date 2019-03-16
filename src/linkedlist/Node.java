@@ -31,6 +31,10 @@ public class Node<T> {
         return tail;
     }
 
+    public void setTail(Node<T> newTail) {
+        tail = newTail;
+    }
+
     /**
      * Add a node to the front of the list
      * This is a none destructive approach
@@ -41,6 +45,23 @@ public class Node<T> {
      */
     public Node<T> addFront(T data) {
         return new Node<>(data, this);
+    }
+
+    /**
+     * Add a node to the back of the linked
+     * list recursively
+     * @param data The data we want to add to the end node
+     */
+    public Node<T> addBack(T data) {
+
+        //Check if the tail is null
+        if(tail == null) {
+            return tail = new Node<>(data, null);
+        }
+
+        //Recursively call the method
+        //Until the tail is found to be null
+        return tail.addBack(data);
     }
 
     /**

@@ -9,11 +9,17 @@ public class Main {
 
         Node<Integer> newNode = linkedList.addFront(11);
 
-        newNode.printAll();
+        //newNode.printAll();
 
         Node<String> linkedListString = new Node<>("I", new Node<>("am", new Node<>("Groot", null)));
 
-        linkedListString.printAll();
+        //linkedListString.printAll();
+
+        Node<Integer> back = new Node<>(1, new Node<>(2, new Node<>(3, null)));
+
+        back.addBack(4).addBack(5).addBack(6);
+
+        back.printAll();
 
 
     }

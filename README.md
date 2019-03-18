@@ -1,4 +1,8 @@
+# Creating a linked list from scratch
+
 In this project a linked list is made from nodes. Each node can only store one reference type i.e. `Integer` or `String` and has to have a tail. A tail can either be another node or the value `null` to mark the end of the linked list.
+
+---
 
 ## Defining a linked list
 

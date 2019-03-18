@@ -20,7 +20,7 @@ Node<Integer> list = new Node<>(“I”, new Node<>(“am”, new Node<>(“Groo
 
 ## Printing
 
-The method `printAll` displays the data stored in the linked list
+The method `printData` displays the data stored in the linked list
 
 ```java
 Node<Integer> list = new Node<>(“I”, new Node<>(“am”, new Node<>(“Groot”, null))); 

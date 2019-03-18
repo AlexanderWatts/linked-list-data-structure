@@ -20,15 +20,13 @@ The method `printAll` displays the data stored in the linked list
 
 ```java
 Node<Integer> list = new Node<>(“I”, new Node<>(“am”, new Node<>(“Groot”, null))); 
-list.printAll()
+System.out.println(list.printData());
 ```
 
 The output being:
 
 ```
-I
-am
-Groot
+[I,am,Groot]
 ```
 
 ## Adding nodes
@@ -40,14 +38,12 @@ To add to the back of the linked list you can simply call the method `addBack` s
 ```java
 Node<Integer> list = new Node<>(1, new Node<>(2, null));
 list.addBack(3);
-list.printAll(); 
+System.out.println(list.printData()); 
 ```
 In this example I have added a node containing the integer 3 to the end of the linked list and have printed its data so the outcome would be:
 
 ```
-1
-2
-3
+[1,2,3]
 ```
 Note that adding to the back of the list is linear `O(n)` as it has to iterate through all the nodes to identify whether the tail is equal to `null`. In the case that the tail is `null` then a new node can be added to the end.
 
@@ -56,13 +52,11 @@ Another approach is to add data to the front of the linked list using `addFront`
 ```java
 Node<Integer> list = new Node<>(1, new Node<>(2, null));
 Node<Integer> newList = list.addFront(0);
-newList.printAll(); 
+System.out.println(list.printData());
 ```
 
 `addFront` returns a new linked list and therefore needs to be stored in a new node which will have the updated head node containing the specified data. The result of this is:
 
 ```
-0
-1
-2
+[0,1,2]
 ```

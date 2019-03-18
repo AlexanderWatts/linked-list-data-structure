@@ -31,10 +31,6 @@ public class Node<T> {
         return tail;
     }
 
-    public void setTail(Node<T> newTail) {
-        tail = newTail;
-    }
-
     /**
      * Add a node to the front of the list
      * This is a none destructive approach
@@ -65,33 +61,48 @@ public class Node<T> {
     }
 
     /**
-     * Print all the data in the linked list
+     * Print the data in the linked list
+     * @return
      */
-    public void printAll() {
+    public String printData() {
 
-        //Store our current linked list
-        Node<T> current = this;
-
-        //Check if the tail is equal to null
-        //then stop the loop as we know we
-        //are at the end of the linked list
-        while(current.getTail() != null) {
-
-            System.out.println(current.getData());
-
-            //If the current nodes tail is null
-            //then print the nodes data
-            if(current.getTail().getTail() == null) {
-                System.out.println(current.getTail().getData());
-            }
-
-            //Set our current node to the next
-            //nodes tail so it becomes the
-            //linked list
-            current = current.getTail();
-
+        // Check if there is only one item in the list
+        //If so only print that data
+        if(tail == null) {
+            return "[" + data + "]";
         }
 
+        //If there is more than one bit of
+        //data in the list recursively call
+        //the tailData method to get the
+        //rest of the data
+        return "[" + data + tail.tailData();
+
+    }
+
+    /**
+     * tailData is needed for printing
+     * all the data in a linked list
+     * as seen in printData
+     * Note: A linked list should not
+     * call this method hence it
+     * being private
+     * @return str The formatted string
+     */
+    private String tailData() {
+
+        //The main structure of the print i.e. ,2,3,]
+        String str = "," + data;
+
+        //When the tail is null
+        //stop the recursion
+        if(tail == null) {
+            return str + "]";
+        }
+
+        //Keep concatenating to str
+        //so that it stores all the data
+        return str + tail.tailData();
     }
 
 

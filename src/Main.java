@@ -15,11 +15,11 @@ public class Main {
 
         //linkedListString.printAll();
 
-        Node<Integer> back = new Node<>(1, new Node<>(2, new Node<>(3, null)));
+        Node<Integer> back = new Node<>(1, null);
 
-        back.addBack(4).addBack(5).addBack(6);
+        back.addBack(2).addBack(3).addBack(4);
 
-        back.printAll();
+        System.out.println(back.printData());
 
 
     }
